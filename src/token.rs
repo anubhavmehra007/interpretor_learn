@@ -41,3 +41,24 @@ impl PartialEq for TokenType {
         }
         }
        } 
+
+       #[cfg(test)]
+       mod test {
+        use super::*;
+        #[test]
+        fn test_equal() {
+            assert_eq!(TokenType::LET, TokenType::LET)
+        }
+        #[test]
+        fn test_uneual() {
+            assert_ne!(TokenType::LET, TokenType::RBRACE)
+        }
+        #[test]
+        fn test_equal_value() {
+            assert_eq!(TokenType::IDENT(String::from("abc")), TokenType::IDENT(String::from("abc")));
+        }
+        #[test]
+        fn test_unequal_value() {
+            assert_ne!(TokenType::IDENT(String::from("labc")), TokenType::IDENT(String::from("abc")));
+        }
+       }
