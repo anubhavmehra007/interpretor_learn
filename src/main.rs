@@ -3,9 +3,6 @@ use token::TokenType;
 pub mod lexer;
 pub mod token;
 fn main() {
-        let input = "=+(){},";
-        let mut lexer  = Lexer::from(input);
-        dbg!(lexer.next_token());
 }
 
 #[cfg(test)]
