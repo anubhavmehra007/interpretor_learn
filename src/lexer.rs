@@ -1,5 +1,35 @@
-use crate::TokenType;
 use std::str;
+
+#[derive(Debug, PartialEq)]
+pub enum TokenType {
+    ILLEGAL,
+    EOF,
+    IDENT(String),
+    INT(String),
+    ASSIGN,
+    PLUS,
+    MINUS,
+    BANG,
+    ASTERISK,
+    SLASH,
+    LT,
+    GT,
+    COMMA,
+    SEMICOLON,
+    LPAREN,
+    RPAREN,
+    LBRACE,
+    RBRACE,
+    FUNCTION,
+    LET,
+    TRUE,
+    FALSE,
+    IF,
+    ELSE,
+    RETURN,
+    EQ,
+    NOTEQ,
+}
 #[derive(Debug)]
 pub struct Lexer {
     input: Vec<u8>,
