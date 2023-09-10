@@ -13,7 +13,7 @@ impl<'a> Repl<'a> {
         }
     }
     fn prompt_and_input(&self) -> Option<String> {
-        let prompt = ">>";
+        let prompt = ">> ";
         let mut line = String::new();
         print!("{}", prompt);
         let _ = io::stdout().flush();
